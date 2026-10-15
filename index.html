@@ -53,6 +53,19 @@ body{margin:0;background:#FAF7F6;color:#1C1314;font-family:'Archivo',Helvetica,A
 *{box-sizing:border-box}
 a{color:#BC1823}
 a:hover{color:#8E0F18}
+.fr-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:56px;background:#1C1314}
+.fr-ph{aspect-ratio:9/13;overflow:hidden}
+.fr-tray{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:48px;align-items:start}
+.fr-coll{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:8px}
+.fr-coll img{width:100%;height:100%;object-fit:cover;display:block;border-radius:2px}
+.fr-coll .c1{grid-row:span 2;aspect-ratio:auto}
+.fr-coll .c2,.fr-coll .c3,.fr-coll .c4{aspect-ratio:4/3}
+.fr-coll .c4{grid-column:1 / -1;aspect-ratio:16/7}
+@media (max-width:820px){
+ .fr-strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+ .fr-ph{flex:0 0 62%;scroll-snap-align:start}
+ .fr-tray{grid-template-columns:1fr;gap:32px}
+}
 @media (max-width:480px){.hdr-in{padding:10px 16px!important;gap:10px!important}.hdr-in img{height:32px!important}.hdr-btn{padding:7px 10px!important;font-size:11.5px!important;letter-spacing:0.02em!important}}
 </style>
 </helmet>
@@ -83,7 +96,7 @@ a:hover{color:#8E0F18}
       <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
         <a href="{{ waLink }}" target="_blank" style="background:#fff;color:#BC1823;text-decoration:none;padding:18px 30px;border-radius:999px;font-weight:800;font-size:18px;" style-hover="background:#1C1314;color:#fff">Inscribir mi pareja por WhatsApp</a>
         <a href="https://forms.gle/yzYKsr2Wxp2G3BtR8" target="_blank" style="background:transparent;color:#fff;border:2px solid #fff;text-decoration:none;padding:16px 28px;border-radius:999px;font-weight:800;font-size:17px;" style-hover="background:#fff;color:#BC1823">Llenar formulario</a>
-        <div style="font-size:16px;font-weight:600;">$56.000 por pareja</div>
+        <div style="font-size:16px;font-weight:600;line-height:1.45;">$56.000 por pareja<br><span style="font-weight:800;">Pago por Nequi: 311 332 3828</span></div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:0;border:2px solid #fff;">
@@ -241,6 +254,39 @@ a:hover{color:#8E0F18}
       <img src="image-0.png" alt="Podio" style="width:100%;height:auto;display:block;margin-top:12px;">
       <figcaption style="font-size:15px;line-height:1.4;"><strong style="letter-spacing:0.08em;text-transform:uppercase;">Podio en la zona de experiencia</strong><br><span style="color:#5E4F50;">* foto de referencia</span></figcaption>
     </figure>
+  </div>
+</section>
+
+
+<section id="quienes" data-screen-label="Quiénes lo hacen" style="background:#F1EDEC;padding:104px 0 0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:20px;">
+    <div><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#BC1823;">Quiénes lo hacen</div><h2 style="margin:12px 0 0;font-size:clamp(30px,3.6vw,44px);line-height:0.95;font-weight:900;font-stretch:120%;letter-spacing:-0.02em;">Frontera Runners</h2></div>
+    <p style="margin:0;font-size:18px;line-height:1.55;max-width:36em;text-wrap:pretty;">El grupo de corredores del barrio organiza, opera y corre el evento. Todo el staff sale del núcleo de la comunidad como voluntariado.</p>
+    <p style="margin:0;font-size:18px;line-height:1.55;max-width:36em;text-wrap:pretty;">Lo lidera <strong>Javier Barrera</strong>, corredor, comunicador y mercadólogo con experiencia en organización y promoción de eventos deportivos.</p>
+  </div>
+  <div class="fr-strip"><div class="fr-ph"><img src="comunidad-1.webp" alt="Comunidad Frontera Runners" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="fr-ph"><img src="comunidad-2.webp" alt="Comunidad Frontera Runners" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="fr-ph"><img src="comunidad-3.webp" alt="Comunidad Frontera Runners" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="fr-ph"><img src="comunidad-4.webp" alt="Comunidad Frontera Runners" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="fr-ph"><img src="comunidad-5.webp" alt="Comunidad Frontera Runners" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="fr-ph"><img src="comunidad-6.webp" alt="Comunidad Frontera Runners" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="fr-ph"><img src="comunidad-7.webp" alt="Comunidad Frontera Runners" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div></div>
+</section>
+
+<section id="trayectoria" data-screen-label="Trayectoria" style="padding:104px 24px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px;">
+    <div><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#BC1823;">Trayectoria</div><h2 style="margin:12px 0 0;font-size:clamp(30px,3.6vw,44px);line-height:0.95;font-weight:900;font-stretch:120%;letter-spacing:-0.02em;">Experiencia en eventos deportivos</h2></div>
+    <div class="fr-tray">
+      <div style="display:flex;flex-direction:column;gap:28px;">
+        <div><p style="font-size:14px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#BC1823;margin:0 0 8px;">Eventos y experiencias para marcas</p>
+          <div style="padding:6px 0;font-size:17px;border-bottom:1px solid #E4DCDB;">Bavaria</div><div style="padding:6px 0;font-size:17px;border-bottom:1px solid #E4DCDB;">Acodin</div><div style="padding:6px 0;font-size:17px;border-bottom:1px solid #E4DCDB;">Sociedad Colombiana de Ortodoncia</div></div>
+        <div><p style="font-size:14px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#BC1823;margin:0 0 8px;">Desarrollo técnico de carreras</p>
+          <div style="padding:6px 0;font-size:17px;border-bottom:1px solid #E4DCDB;">Corramos por Colombia</div><div style="padding:6px 0;font-size:17px;border-bottom:1px solid #E4DCDB;">Women Warriors</div></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:2px solid #1C1314;padding-top:20px;">
+          <div style="display:flex;flex-direction:column;gap:8px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23BC1823%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M10%2017h4V5H2v12h3%27%2F%3E%3Cpath%20d%3D%27M20%2017h2v-3.34a4%204%200%200%200-1.17-2.83L19%209h-5v8h1%27%2F%3E%3Ccircle%20cx%3D%277.5%27%20cy%3D%2717.5%27%20r%3D%272.5%27%2F%3E%3Ccircle%20cx%3D%2717.5%27%20cy%3D%2717.5%27%20r%3D%272.5%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:28px;height:28px;display:block;"><strong style="font-size:16px;line-height:1.2;">Operación logística</strong></div><div style="display:flex;flex-direction:column;gap:8px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23BC1823%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M4%2022V4a1%201%200%200%201%201-1h10l-1.5%203L15%209H5%27%2F%3E%3Cpath%20d%3D%27M4%2015h9%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:28px;height:28px;display:block;"><strong style="font-size:16px;line-height:1.2;">Dirección técnica deportiva</strong></div><div style="display:flex;flex-direction:column;gap:8px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23BC1823%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27m22%208-6%204%206%204V8z%27%2F%3E%3Crect%20x%3D%272%27%20y%3D%276%27%20width%3D%2714%27%20height%3D%2712%27%20rx%3D%272%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:28px;height:28px;display:block;"><strong style="font-size:16px;line-height:1.2;">Fotografía y video</strong></div>
+        </div>
+      </div>
+      <div class="fr-coll">
+        <img class="c1" src="trayectoria-1.webp" alt="Llegada a meta en carrera organizada" loading="lazy">
+        <img class="c2" src="trayectoria-2.webp" alt="Arco de meta en evento deportivo" loading="lazy">
+        <img class="c3" src="trayectoria-3.webp" alt="Participantes en eventos deportivos" loading="lazy">
+        <img class="c4" src="trayectoria-4.webp" alt="Corredora celebrando en carrera" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 
