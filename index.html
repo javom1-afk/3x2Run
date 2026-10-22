@@ -53,6 +53,8 @@ body{margin:0;background:#FAF7F6;color:#1C1314;font-family:'Archivo',Helvetica,A
 *{box-sizing:border-box}
 a{color:#BC1823}
 a:hover{color:#8E0F18}
+@media (max-width:1180px){.hdr-links{gap:16px!important;font-size:13px}}
+@media (max-width:1060px){.hdr-links{display:none!important}}
 .fr-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:56px;background:#1C1314}
 .fr-ph{aspect-ratio:9/13;overflow:hidden}
 .fr-tray{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:48px;align-items:start}
@@ -75,11 +77,12 @@ a:hover{color:#8E0F18}
     <img src="image-1.png" alt="Frontera Runners" style="height:40px;width:auto;display:block;">
     <nav style="display:flex;align-items:center;gap:24px;font-size:14px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;">
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
-        <div style="display:flex;gap:24px;">
+        <div class="hdr-links" style="display:flex;gap:24px;">
           <a href="#formato" style="color:#fff;text-decoration:none;">Formato</a>
           <a href="#recorrido" style="color:#fff;text-decoration:none;">Recorrido</a>
           <a href="#inscripcion" style="color:#fff;text-decoration:none;">Inscripción</a>
           <a href="#premios" style="color:#fff;text-decoration:none;">Reconocimientos</a>
+          <a href="#mascotas" style="color:#fff;text-decoration:none;">Mascotas</a>
         </div>
       </sc-if>
       <div style="display:flex;gap:8px;align-items:center;"><a class="hdr-btn" href="{{ waLink }}" target="_blank" style="background:transparent;color:#fff;border:2px solid #fff;text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:800;white-space:nowrap;">Info WhatsApp</a><a class="hdr-btn" href="https://forms.gle/yzYKsr2Wxp2G3BtR8" target="_blank" style="background:#fff;color:#BC1823;border:2px solid #fff;text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:800;white-space:nowrap;">Inscríbete</a></div>
@@ -257,6 +260,29 @@ a:hover{color:#8E0F18}
   </div>
 </section>
 
+
+
+<section id="mascotas" data-screen-label="Categoría Mascotas" style="background:#5B2BC4;color:#fff;padding:104px 24px;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23ffffff%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Ccircle%20cx%3D%2711%27%20cy%3D%274%27%20r%3D%272%27%2F%3E%3Ccircle%20cx%3D%2718%27%20cy%3D%278%27%20r%3D%272%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2716%27%20r%3D%272%27%2F%3E%3Cpath%20d%3D%27M9%2010a5%205%200%200%201%205%205v3.5a3.5%203.5%200%200%201-6.84%201.045Q6.52%2017.48%204.46%2016.84A3.5%203.5%200%200%201%205.5%2010Z%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:30px;height:30px;display:block;"><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;">Nueva categoría</div><span style="background:#C0202A;color:#fff;font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px;">Cupos limitados</span></div>
+      <h2 style="margin:0;font-size:clamp(34px,4.6vw,60px);line-height:0.92;font-weight:900;font-stretch:120%;letter-spacing:-0.02em;">Categoría Mascotas</h2>
+      <div style="display:flex;align-items:center;gap:16px;"><img src="dante-mascotas.jpg" alt="Dante Mascotas" style="width:96px;height:96px;border-radius:14px;display:block;flex:none;box-shadow:0 0 0 3px rgba(255,255,255,.9);"><div style="font-size:15px;line-height:1.4;"><span style="display:block;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#D9C8FF;">En alianza con</span><strong style="font-size:22px;font-weight:900;font-stretch:110%;">Dante Mascotas</strong><span style="display:block;color:#EDE4FF;">Con amor para bendiciones peludas.</span></div></div>
+      <p style="margin:0;font-size:18px;line-height:1.55;max-width:32em;text-wrap:pretty;">Corre con tu perro una vuelta de 1,5 km por el parque de Ciudad Pacífica. Es individual: una persona con su mascota, sin pareja.</p>
+      <div style="display:flex;gap:40px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.3);padding-top:20px;">
+        <div><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#D9C8FF;font-size:12px;">Salida</div><div style="font-size:28px;font-weight:900;font-stretch:115%;margin-top:4px;">8:00 a.m.</div></div>
+        <div><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#D9C8FF;font-size:12px;">Recorrido</div><div style="font-size:28px;font-weight:900;font-stretch:115%;margin-top:4px;">1 vuelta · 1,5 km</div></div>
+        <div><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#D9C8FF;font-size:12px;">Valor</div><div style="font-size:28px;font-weight:900;font-stretch:115%;margin-top:4px;">$10.000</div></div>
+      </div>
+      <div style="display:flex;"><a href="https://forms.gle/A4HT5p68HLKMyNtX7" target="_blank" style="margin-top:8px;background:#fff;color:#5B2BC4;text-decoration:none;padding:18px 30px;border-radius:999px;font-weight:800;font-size:18px;" style-hover="background:#1C1314;color:#fff">Inscribe a tu mascota</a></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0;"><figure style="margin:0;position:relative;"><img src="mascota-corriendo.webp" alt="Persona corriendo con su perro" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:60% 50%;display:block;"><figcaption style="position:absolute;right:10px;bottom:8px;font-size:12px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6);">* foto de referencia</figcaption></figure><div style="background:#FAF7F6;color:#1C1314;padding:32px;display:flex;flex-direction:column;gap:18px;">
+      <div style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#5B2BC4;">Qué incluye</div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:16px;font-weight:600;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%235B2BC4%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M12%2022a7%207%200%200%200%207-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5%202.5-2%204.9-4%206.5C6%2011.1%205%2013%205%2015a7%207%200%200%200%207%207z%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:30px;height:30px;flex:none;display:block;">Hidratación con agua para ti y tu mascota</div><div style="display:flex;align-items:center;gap:14px;font-size:16px;font-weight:600;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%235B2BC4%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Crect%20x%3D%272%27%20y%3D%275%27%20width%3D%2720%27%20height%3D%2714%27%20rx%3D%272%27%2F%3E%3Cpath%20d%3D%27M7%2012h.01%27%2F%3E%3Cpath%20d%3D%27M12%2012h.01%27%2F%3E%3Cpath%20d%3D%27M17%2012h.01%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:30px;height:30px;flex:none;display:block;">Dorsal</div><div style="display:flex;align-items:center;gap:14px;font-size:16px;font-weight:600;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%235B2BC4%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M15.477%2012.89%2017%2022l-5-3-5%203%201.523-9.11%27%2F%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%278%27%20r%3D%276%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:30px;height:30px;flex:none;display:block;">Pin de finisher</div><div style="display:flex;align-items:center;gap:14px;font-size:16px;font-weight:600;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%235B2BC4%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M14.5%204h-5L7%207H4a2%202%200%200%200-2%202v9a2%202%200%200%200%202%202h16a2%202%200%200%200%202-2V9a2%202%200%200%200-2-2h-3z%27%2F%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2713%27%20r%3D%273%27%2F%3E%3C%2Fsvg%3E" alt="" style="width:30px;height:30px;flex:none;display:block;">Fotografía</div>
+      <div style="border-top:1px solid #E4DCDB;padding-top:18px;font-size:15px;line-height:1.55;color:#5E4F50;"><strong style="color:#1C1314;">Reglas:</strong> correa obligatoria durante todo el recorrido, carné de vacunas al día y bolsa para recoger. El dueño responde por su mascota.</div>
+    </div></div>
+  </div>
+</section>
 
 <section id="quienes" data-screen-label="Quiénes lo hacen" style="background:#F1EDEC;padding:104px 0 0;">
   <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:20px;">
